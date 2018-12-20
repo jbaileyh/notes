@@ -1,0 +1,24 @@
+# Linear Regression
+
+ - F-statistic determines if at least one coefficient is not zero. I.e. there is a relationship between the response and the predictors. 
+   - It can also be run on a subset of coefficients.
+ - Identify important variables using variable selection.
+   - With small numbers of predictors, try all (maybe) and use AIC, BIC, Adjusted R2 or even Mallow's Cp.
+   - Else, use
+     - Forward selection
+     - Backward selection 
+     - Mixed selection
+- Model fit in general
+  - RSE
+  - R2
+- Removing the additive assumption
+  - Use multiplied variables to create new interactions rather than just using main effects. 
+  - Note: if doing so __heirarchical principle__ suggests include the main effects too.
+- Accounting for non-linear relationships
+  - If needed, try transforming predictors, e.g. X2, X3, X4 or even root of X...
+  - __Problems__
+      - Correlation of errors
+      - Non - constant variance of errors
+      - Outliers - look into studentized residuals if needed
+      - High-leverage data points
+      - Collinearity (also occurs normally not just with non linear transformations)
